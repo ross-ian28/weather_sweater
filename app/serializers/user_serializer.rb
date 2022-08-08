@@ -8,7 +8,7 @@ class UserSerializer
         id: user.id,
         attributes: {
           email: user.email,
-          api_key: SecureRandom.hex
+          api_key: user.api_key
         }
       }
     }
