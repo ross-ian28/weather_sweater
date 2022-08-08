@@ -8,11 +8,11 @@ RSpec.describe "munchies api" do
 
     expect(response).to be_successful
 
-    expect(weather).to include :id, :type, :attributes
-    expect(weather[:id]).to eq(nil)
-    expect(weather[:type]).to eq("munchie")
-    expect(weather[:attributes]).to include :destination_city, :forcast, :restaurant
-    expect(weather[:attributes][:forecast]).to include :summary, :temperature
-    expect(weather[:attributes][:restaurant]).to include :name, :address
+    expect(data).to include :id, :type, :attributes
+    expect(data[:id]).to eq(nil)
+    expect(data[:type]).to eq("munchie")
+    expect(data[:attributes]).to include :destination_city, :forecast, :restaurant
+    expect(data[:attributes][:forecast]).to include :summary, :temperature
+    expect(data[:attributes][:restaurant]).to include :name, :address
   end
 end
