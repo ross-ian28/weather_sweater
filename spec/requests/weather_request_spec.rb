@@ -21,8 +21,8 @@ RSpec.describe "weather api" do
 
     expect(weather[:attributes][:daily_weather].count).to eq(5)
     expect(weather[:attributes][:daily_weather][0]).to include :date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon
-    expect(weather[:attributes][:daily_weather][0]).to_not include :moonrise, :pressure, :dew_point, :clouds, :uviÍ
-    \
+    expect(weather[:attributes][:daily_weather][0]).to_not include :moonrise, :pressure, :dew_point, :clouds, :uvi
+
     expect(weather[:attributes][:hourly_weather].count).to eq(8)
     expect(weather[:attributes][:hourly_weather][0]).to include :time, :temperature, :conditions, :icon
     expect(weather[:attributes][:hourly_weather][0]).to_not include :clouds, :humidity, :wind_speed, :wind_gust
