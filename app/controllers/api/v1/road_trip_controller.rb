@@ -4,8 +4,6 @@ class Api::V1::RoadTripController < ApplicationController
       trip = RoadTripFacade.trip(params[:origin], params[:destination])
       if trip.error != nil || trip.seconds >= 10000000
         render json: RoadTripSerializer.bad_trip(params[:origin], params[:destination])
-      elsif (trip.hour / 24) > 8
-        render json: "Too far in advance to determine"
       else
         cords = GeocodeFacade.cords(params[:location])
         weather = WeatherFacade.future_weather(cords[0].lat, cords[0].lng, trip.hour)
