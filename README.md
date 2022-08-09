@@ -20,11 +20,13 @@
 
 ## Api Keys
 Sign up for api keys here
+
 [Geocode Api](https://developer.mapquest.com/)
 
 [OpenWeather Api](https://openweathermap.org/)
 
-Put your key in the config/application.yml file in the format
+Put your key in the config/application.yml file in the format:
+
 geocode_api_key: geocode key
 weather_api_key: open weather key
 
