@@ -1,5 +1,3 @@
-require 'securerandom'
-
 class UserSerializer
   def self.create_user(user)
     {
