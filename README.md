@@ -1,9 +1,7 @@
-# README
-
-## About the project
+# About the project
  An application to plan road trips. This app will allow users to see the current weather as well as the forecasted weather at the destination.
 
- ## Gems
+ ### Gems
    ![rspec](https://img.shields.io/gem/v/rspec-rails?label=rspec&style=flat-square)
    ![capybara](https://img.shields.io/gem/v/capybara?label=capybara&style=flat-square)
    ![simplecov](https://img.shields.io/gem/v/simplecov?label=simplecov&style=flat-square)
@@ -28,10 +26,11 @@ Sign up for api keys here
 Put your key in the config/application.yml file in the format:
 
 geocode_api_key: geocode key
+
 weather_api_key: open weather key
 
 ## Testing Instructions
  - Clone this repo
- - in terminal (apple or integrated)    
+ - in terminal
     * bundle install
     * bundle exec rspec
