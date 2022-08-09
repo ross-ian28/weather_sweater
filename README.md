@@ -20,8 +20,8 @@
 
 ## Api Keys
 
-![Geocode](https://developer.mapquest.com/)
-OpenWeather(https://openweathermap.org/)
+[Geocode](https://developer.mapquest.com/)
+[OpenWeather](https://openweathermap.org/)
 
 ## Testing Instructions
  - Clone this repo
