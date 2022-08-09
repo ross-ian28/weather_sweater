@@ -1,24 +1,36 @@
-# README
+# About the project
+ An application to plan road trips. This app will allow users to see the current weather as well as the forecasted weather at the destination.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ ### Gems
+   ![rspec](https://img.shields.io/gem/v/rspec-rails?label=rspec&style=flat-square)
+   ![capybara](https://img.shields.io/gem/v/capybara?label=capybara&style=flat-square)
+   ![simplecov](https://img.shields.io/gem/v/simplecov?label=simplecov&style=flat-square)
+   ![figaro](https://img.shields.io/gem/v/figaro?color=blue&label=figaro)
+   ![faraday](https://img.shields.io/gem/v/faraday?color=blue&label=faraday)
 
-Things you may want to cover:
+## Set Up
+- Clone this repo
+- `bundle install`
+- `rails s`
 
-* Ruby version
+## Database Creation
+- `rails db:{create,migrate}`
 
-* System dependencies
+## Api Keys
+Sign up for api keys here
 
-* Configuration
+[Geocode Api](https://developer.mapquest.com/)
 
-* Database creation
+[OpenWeather Api](https://openweathermap.org/)
 
-* Database initialization
+Put your key in the config/application.yml file in the format:
 
-* How to run the test suite
+geocode_api_key: geocode key
 
-* Services (job queues, cache servers, search engines, etc.)
+weather_api_key: open weather key
 
-* Deployment instructions
-
-* ...
+## Testing Instructions
+ - Clone this repo
+ - in terminal
+    * bundle install
+    * bundle exec rspec
