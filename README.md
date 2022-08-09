@@ -19,9 +19,14 @@
 - `rails db:{create,migrate}`
 
 ## Api Keys
+Sign up for api keys here
+[Geocode Api](https://developer.mapquest.com/)
 
-[Geocode](https://developer.mapquest.com/)
-[OpenWeather](https://openweathermap.org/)
+[OpenWeather Api](https://openweathermap.org/)
+
+Put your key in the config/application.yml file in the format
+geocode_api_key: geocode key
+weather_api_key: open weather key
 
 ## Testing Instructions
  - Clone this repo
