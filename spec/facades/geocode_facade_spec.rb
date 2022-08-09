@@ -7,8 +7,8 @@ RSpec.describe GeocodeFacade do
 
       expect(cords).to be_an Array
 
-      expect(cords[0].lat).to eq(43.84861)
-      expect(cords[0].lng).to eq(-96.2252)
+      expect(cords[0].lat).to be_a(Float)
+      expect(cords[0].lng).to be_a(Float)
     end
   end
 end
