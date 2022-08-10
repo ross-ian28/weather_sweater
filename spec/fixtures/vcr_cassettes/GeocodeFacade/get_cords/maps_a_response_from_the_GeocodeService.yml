@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&location=Denver,COmaxResults=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.4.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Wed, 10 Aug 2022 20:13:27 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '7507'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Wed, 10 Aug 2022 20:13:27 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Set-Cookie:
+      - JSESSIONID=07A5CDE97E30E5652A96CC2EE533AEE4; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2022 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2022 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Denver,COmaxResults=1"},"locations":[{"street":"1
+        Mile Road","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"MI","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"49421","geocodeQualityCode":"B3CAA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p0/5333595","unknownInput":"","type":"s","latLng":{"lat":43.56834,"lng":-85.98975},"displayLatLng":{"lat":43.56834,"lng":-85.98975},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=43.56834,-85.98975|marker-sm-50318A-1&scalebar=true&zoom=15&rand=239892555"},{"street":"County
+        Highway 1","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"MN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"B3CAA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/1302176","unknownInput":"","type":"s","latLng":{"lat":43.84861,"lng":-96.2252},"displayLatLng":{"lat":43.84861,"lng":-96.2252},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=43.84861,-96.2252|marker-sm-50318A-2&scalebar=true&zoom=15&rand=825974895"},{"street":"South
+        Southern Hills Drive","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"NE","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"68901","geocodeQualityCode":"B3CAA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p0/4593693","unknownInput":"","type":"s","latLng":{"lat":40.56123,"lng":-98.43998},"displayLatLng":{"lat":40.56123,"lng":-98.43998},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=40.56123,-98.43998|marker-sm-50318A-3&scalebar=true&zoom=15&rand=436233994"},{"street":"North
+        Southern Hills Drive","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"NE","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"68901","geocodeQualityCode":"B3CAA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/4288450","unknownInput":"","type":"s","latLng":{"lat":40.58196,"lng":-98.43767},"displayLatLng":{"lat":40.58196,"lng":-98.43767},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=40.58196,-98.43767|marker-sm-50318A-4&scalebar=true&zoom=15&rand=-52780543"},{"street":"1
+        Road 1","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Deaver","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"WY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"82421","geocodeQualityCode":"P1CCA","geocodeQuality":"POINT","dragPoint":false,"sideOfStreet":"N","linkId":"US/PAD/p1/58616912","unknownInput":"","type":"s","latLng":{"lat":44.93231,"lng":-108.58838},"displayLatLng":{"lat":44.93231,"lng":-108.58838},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=44.93231,-108.58838|marker-sm-50318A-5&scalebar=true&zoom=15&rand=-2053781649"},{"street":"P-40-1","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver
+        City","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"TX","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"79323","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p3/3571070","unknownInput":"","type":"s","latLng":{"lat":33.01028,"lng":-102.8434},"displayLatLng":{"lat":33.01028,"lng":-102.8434},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=33.01028,-102.8434|marker-sm-50318A-6&scalebar=true&zoom=15&rand=200085734"},{"street":"Tennessee
+        1","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"New Johnsonville","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"TN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p3/6178977","unknownInput":"","type":"s","latLng":{"lat":36.02966,"lng":-87.9501},"displayLatLng":{"lat":36.02966,"lng":-87.9501},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=36.02966,-87.9501|marker-sm-50318A-7&scalebar=true&zoom=15&rand=-732286491"},{"street":"Old
+        State Highway 1","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"New
+        Johnsonville","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"TN","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"37134","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p3/5329994","unknownInput":"","type":"s","latLng":{"lat":36.00088,"lng":-87.93194},"displayLatLng":{"lat":36.00088,"lng":-87.93194},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=36.00088,-87.93194|marker-sm-50318A-8&scalebar=true&zoom=15&rand=423432431"},{"street":"Gate
+        1 Road","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Houston","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"TX","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"77029","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/4738394","unknownInput":"","type":"s","latLng":{"lat":29.73732,"lng":-95.27205},"displayLatLng":{"lat":29.73732,"lng":-95.27205},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=29.73732,-95.27205|marker-sm-50318A-9&scalebar=true&zoom=15&rand=1938115914"},{"street":"Right
+        Branch Rockhouse 1","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Hagerhill","adminArea5Type":"City","adminArea4":"","adminArea4Type":"County","adminArea3":"KY","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"41222","geocodeQualityCode":"B3CCA","geocodeQuality":"STREET","dragPoint":false,"sideOfStreet":"N","linkId":"US/STR/p2/1689445","unknownInput":"","type":"s","latLng":{"lat":37.80018,"lng":-82.85455},"displayLatLng":{"lat":37.80018,"lng":-82.85455},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=ypN8vgRtOizMjEBFQo5JvfAoQ8MxbEHT&type=map&size=225,160&locations=37.80018,-82.85455|marker-sm-50318A-10&scalebar=true&zoom=15&rand=1828518118"}]}]}'
+  recorded_at: Wed, 10 Aug 2022 20:13:27 GMT
+recorded_with: VCR 6.1.0
