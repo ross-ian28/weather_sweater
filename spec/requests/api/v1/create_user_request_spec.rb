@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "user creation api" do
-  it "returns user creation information" do
+  it "returns user creation information", :vcr do
     params = {
       email: "pabu@example.com",
       password: "pabu123",
@@ -34,7 +34,7 @@ RSpec.describe "user creation api" do
 
       post "/api/v1/users", headers: headers, params: JSON.generate(params)
     end
-    it "all fields are required" do
+    it "all fields are required", :vcr do
       params = {
         email: "",
         password: "pabu123",
@@ -48,7 +48,7 @@ RSpec.describe "user creation api" do
       expect(response.body).to eq("Email can't be blank")
     end
 
-    it "passwords dont match" do
+    it "passwords dont match", :vcr do
       params = {
         email: "pabu@example.com",
         password: "pabu123",
@@ -62,7 +62,7 @@ RSpec.describe "user creation api" do
       expect(response.body).to eq("Password confirmation doesn't match Password")
     end
 
-    it "email is taken" do
+    it "email is taken", :vcr do 
       params = {
         email: "loki@example.com",
         password: "pabu123",

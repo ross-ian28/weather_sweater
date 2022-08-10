@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "weather api" do
-  it "returns forcast data for a location" do
+  it "returns forcast data for a location", :vcr do 
     get "/api/v1/forecast?location=Denver,CO"
 
     weather = JSON.parse(response.body, symbolize_names: true)[:data]

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe WeatherFacade do
   describe 'get weather' do
-    it 'creates a forcast poro' do
+    it 'creates a forcast poro', :vcr do 
       weather = WeatherFacade.weather("43.84861", "-96.2252")
 
       expect(weather.current).to_not be_an Array

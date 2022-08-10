@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe GeocodeFacade do
   describe 'get cords' do
-    it 'maps a response from the GeocodeService' do
+    it 'maps a response from the GeocodeService', :vcr do
       cords = GeocodeFacade.cords("Denver,CO")
 
       expect(cords).to be_an Array
