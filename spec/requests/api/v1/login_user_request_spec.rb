@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "login endpoint" do
-  it "logs in a user" do
+  it "logs in a user", :vcr do
     user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
 
     params = {
@@ -28,7 +28,7 @@ RSpec.describe "login endpoint" do
     before :each do
       User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
     end
-    it "has wrong email" do
+    it "has wrong email", :vcr do
       params = {
         email: "loki@example.com",
         password: "pabu123"
@@ -40,7 +40,7 @@ RSpec.describe "login endpoint" do
       expect(response).to_not be_successful
       expect(response.body).to eq("Invalid info")
     end
-    it "has wrong email" do
+    it "has wrong email", :vcr do 
       params = {
         email: "pabu@example.com",
         password: "pabu"
@@ -48,7 +48,7 @@ RSpec.describe "login endpoint" do
       headers = { "Content-Type" => "application/json" }
 
       post "/api/v1/sessions", headers: headers, params: JSON.generate(params)
-      
+
       expect(response).to_not be_successful
       expect(response.body).to eq("Invalid info")
     end

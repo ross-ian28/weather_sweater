@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "weather api" do
-  it "returns forcast data for Denver to Estes" do
+  it "returns forcast data for Denver to Estes", :vcr do
     user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
     params = {
       origin: "Denver, CO",
@@ -27,7 +27,7 @@ RSpec.describe "weather api" do
     expect(data[:attributes][:weather_at_eta][:temperature]).to be_a(Float)
     expect(data[:attributes][:weather_at_eta][:conditions]).to_not eq("")
   end
-  it "returns forcast data for NY to CA" do
+  it "returns forcast data for NY to CA", :vcr do
     user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
     params = {
       origin: "New York, NY",
@@ -46,7 +46,7 @@ RSpec.describe "weather api" do
     expect(data[:attributes][:weather_at_eta][:temperature]).to be_a(Float)
     expect(data[:attributes][:weather_at_eta][:conditions]).to_not eq("")
   end
-  it "returns forcast data for NY to Panama" do
+  it "returns forcast data for NY to Panama", :vcr do
     user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
     params = {
       origin: "New York, NY",
@@ -65,7 +65,7 @@ RSpec.describe "weather api" do
     expect(data[:attributes][:weather_at_eta][:temperature]).to be_a(Float)
     expect(data[:attributes][:weather_at_eta][:conditions]).to_not eq("")
   end
-  it "returns forcast data for NY to London" do
+  it "returns forcast data for NY to London", :vcr do
     user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
     params = {
       origin: "New York, NY",
@@ -85,7 +85,7 @@ RSpec.describe "weather api" do
     expect(data[:attributes][:weather_at_eta][:conditions]).to eq("")
   end
   describe "sad path" do
-    it "needs an api key" do
+    it "needs an api key", :vcr do
       user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
       params = {
         origin: "Denver,CO",
@@ -98,7 +98,7 @@ RSpec.describe "weather api" do
       expect(response).to_not be_successful
       expect(response.body).to eq("Unauthorized")
     end
-    it "needs correct api key" do
+    it "needs correct api key", :vcr do 
       user = User.create(email: "pabu@example.com", password: "pabu123", password_confirmation: "pabu123", api_key: "abcde12345")
       params = {
         origin: "Denver,CO",

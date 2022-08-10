@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Location do
-  it 'populates location fields from JSON response' do
+  it 'populates location fields from JSON response', :vcr do
     data = {:lat=>43.84861, :lng=>-96.2252}
 
     cords = Location.new(data)

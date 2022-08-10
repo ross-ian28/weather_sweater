@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe WeatherService do
   describe 'get_weather' do
-    it 'returns weather info' do
+    it 'returns weather info', :vcr do 
       weather = WeatherService.get_weather("43.84861", "-96.2252")
 
       expect(weather[:current]).to include :dt, :sunrise, :sunset, :weather

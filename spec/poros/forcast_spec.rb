@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Forcast do
-  it 'populates forcast fields from JSON response' do
+  it 'populates forcast fields from JSON response', :vcr do 
     data = {:current=>
     {:dt=>1659848283,
      :sunrise=>1659824984,
